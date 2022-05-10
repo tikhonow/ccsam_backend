@@ -46,6 +46,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     updated = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=255, null=True)
     last_name = models.CharField(max_length=255, null=True)
+    work = models.CharField(max_length=255, null=True)
+    allowemail = models.BooleanField(null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
