@@ -24,3 +24,6 @@ class Project(models.Model):
     purpose = models.CharField(max_length=255)
     image = models.ImageField(upload_to=image_folder)
     file = models.FileField(blank=True, upload_to=project_folder)
+
+    def __str__(self):
+        return  self.name
